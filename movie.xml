@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movie>
+  <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="0" hierarchy="1" />
+  <item title="テンプレート" type="1" hierarchy="2" />
+  <item title="称号アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="0" hierarchy="2.1" />
 </movie>
