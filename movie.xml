@@ -4,4 +4,8 @@
   <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="0" hierarchy="2" />
   <item title="テンプレート" type="1" hierarchy="3" />
   <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="0" hierarchy="3.1" />
+  <item title="テスト1" type="1" hierarchy="4" />
+  <item title="テスト2" type="1" hierarchy="4.1" />
+  <item title="テスト3" type="1" hierarchy="4.2" />
+  <item title="テスト4" url="https://youtu.be/pyHeNIICk4w" type="0" hierarchy="4.1.1" />
 </movie>
