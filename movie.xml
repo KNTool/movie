@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movie>
-  <item title="KNTool HP" url="https://cweb.canon.jp/ht/software/kntool/index.html" type="1" hierarchy="1" />
-  <item title="アニメーション紹介" url="https://www.youtube.com/watch?v=-MhLGJsfNqM" type="0" hierarchy="2" />
-  <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="0" hierarchy="3" />
+  <item title="KNTool HP" url="https://cweb.canon.jp/ht/software/kntool/index.html" type="2" hierarchy="1" />
+  <item title="アニメーション紹介" url="https://www.youtube.com/watch?v=-MhLGJsfNqM" type="1" hierarchy="2" />
+  <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="1" hierarchy="3" />
   <item title="テンプレート" type="10" hierarchy="4" />
-  <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="0" hierarchy="4.1" />
+  <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="1" hierarchy="4.1" />
 </movie>
