@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<movie version="1.1.0.0" >
+<movie>
   <item type="20" hierarchy="1" />
   <item title="KNToolについて" url="https://cweb.canon.jp/ht/software/kntool/index.html" type="2" hierarchy="2" />
   <item title="KNToolに関する問い合わせ" url="https://www.canon-elec.co.jp/solution/mobile/handyterminal/#contact" type="2" hierarchy="3" />
+  <item title="最新バージョンを確認する" url="" type="100" hierarchy="4" version="1.1.0.0" />
 </movie>
