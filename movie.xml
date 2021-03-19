@@ -3,9 +3,8 @@
   <item title="KNTool HP" url="https://cweb.canon.jp/ht/software/kntool/index.html" type="2" hierarchy="1" />
   <item type="20" hierarchy="2" />
   <item title="アニメーション紹介" url="https://www.youtube.com/watch?v=-MhLGJsfNqM" type="1" hierarchy="3" />
-  <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="1" hierarchy="4" />
-  <item title="テンプレート" type="10" hierarchy="5" />
-  <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="1" hierarchy="5.1" />
-  <item title="マニュアル" type="10" hierarchy="6" />
-  <item title="KNToolマニュアル" url="KNToolマニュアル" id="KNToolマニュアル" type="30" hierarchy="6.1" />
+  <item title="テンプレート" type="10" hierarchy="4" />
+  <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="1" hierarchy="4.1" />
+  <item title="マニュアル" type="10" hierarchy="5" />
+  <item title="KNToolマニュアル" url="KNToolマニュアル" id="KNToolマニュアル" type="30" hierarchy="5.1" />
 </movie>
