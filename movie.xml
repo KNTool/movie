@@ -6,4 +6,6 @@
   <item title="概要紹介" url="https://youtu.be/ggAEohzhPZk" type="1" hierarchy="4" />
   <item title="テンプレート" type="10" hierarchy="5" />
   <item title="照合アプリ作成" url="https://youtu.be/pyHeNIICk4w" type="1" hierarchy="5.1" />
+  <item title="マニュアル" type="10" hierarchy="6" />
+  <item title="KNToolマニュアル" url="KNToolマニュアル" id="KNToolマニュアル" type="30" hierarchy="6.1" />
 </movie>
