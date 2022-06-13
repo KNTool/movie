@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #guage {}
+        .mainpage{position: relative;}
+        .keyback{position: absolute; bottom: 0%;}
+        .key{position: absolute; text-align: center; vertical-align: middle;}
+        .knlabel{position: absolute; }
+        .kntextbox{position: absolute; margin-bottom: 3vh; display: inline-flex;}
+        .kntextbox .text {position: absolute; background-color: transparent; color: #757575; outline: none; border-style: solid; border-color: #212121; border-width: 0px 0px 2px 0px; bottom: 0px;}
+        .kntextbox .lable{position: absolute; background-color: transparent; color: #212121; font-size: 24px;}
+        .kntextbox .limit{position: absolute; background-color: transparent; color: #212121; font-size: 12px; bottom: 0px; text-align: right;}
+        .kntextbox > input.text:focus{ border-color: #0277BD; color:#212121; border-width: 3px; outline: none; border-style: solid; border-width: 0px 0px 2px 0px; }
+        .kntextbox > input.text:focus ~ label{ color: #0277BD; font-weight: bold;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainpage">
+        <div id="kn_page" id="guage" :style="{width:width+'px', height:height+'px', backgroundColor:color}"></div>
+        <div id="kn_keyback" id="guage" class="keyback" :style="{width:width+'px', height:height+'px', backgroundColor:color}"></div>
+        <div id="kn_lkey" id="guage" class="key" :style="{bottom:bottom+'px', left:left+'px', width:width+'px', height:height+'px', backgroundColor:color, fontSize:fontsize+'px'}">{{text}}</div>
+        <div id="kn_f1key" id="guage" class="key" :style="{bottom:bottom+'px', left:left+'px', width:width+'px', height:height+'px', backgroundColor:color, fontSize:fontsize+'px'}">{{text}}</div>
+        <div id="kn_f2key" id="guage" class="key" :style="{bottom:bottom+'px', left:left+'px', width:width+'px', height:height+'px', backgroundColor:color, fontSize:fontsize+'px'}">{{text}}</div>
+        <div id="kn_rkey" id="guage" class="key" :style="{bottom:bottom+'px', left:left+'px', width:width+'px', height:height+'px', backgroundColor:color, fontSize:fontsize+'px'}">{{text}}</div>
+        <div id="kntitle" id="guage" class="knlabel" :style="{top:top+'px', left:left+'px', width:width+'px', height:height+'px', backgroundColor:color, color:textcolor, fontSize:fontsize+'px', textAlign:align}">{{text}}</div>
+        <div id="kntextbox1" class="kntextbox" :style="{top:top+'px', left:left+'px', height:(height + labelheight * 2)+'px', backgroundColor:color}">
+            <input class="text" type="textbox" v-model="value" :style="{width:width+'px', height:height+'px', fontSize:fontsize+'px', bottom: labelheight+'px'}"></input>
+            <label class="label" :style="{width:width+'px', height:labelheight+'px', fontSize:labelsize+'px'}">{{labeltext}}</label>
+            <label class="limit" :style="{width:width+'px', height:labelheight+'px', fontSize:labelsize+'px'}">{{value.length}}</label>
+        </div>
+        <div id="kntextbox2" class="kntextbox" :style="{top:top+'px', left:left+'px', height:(height + labelheight * 2)+'px'}">
+            <input class="text" type="textbox" v-model="value" :style="{width:width+'px', height:height+'px', fontSize:fontsize+'px', bottom: labelheight+'px'}" maxlength="3"></input>
+            <label class="label" :style="{width:width+'px', height:labelheight+'px', fontSize:labelsize+'px', backgroundColor:color}">{{labeltext}}</label>
+            <label class="limit" :style="{width:width+'px', height:labelheight+'px', fontSize:labelsize+'px'}">{{value.length}}/{{limit}}</label>
+        </div>
+    </div>
+    <script src="https://jp.vuejs.org/js/vue.min.js"></script>
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    -->
+            <!--
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+        });
+        -->
+
+    <script>
+        var page = new Vue({
+            el : "#kn_page",
+            data : {
+                height : 640,
+                width : 480,
+                color : "#EEEEEE",
+            },
+        });
+
+        var key_back = new Vue({
+            el : "#kn_keyback",
+            data : {
+                height : 60,
+                width : 480,
+                color : "black",
+            },
+        });
+
+        var l_key = new Vue({
+            el : "#kn_lkey",
+            data : {
+                height : 44,
+                width : 98,
+                color : "#FF2020",
+                text : "◀L",
+                fontsize : 32,
+                bottom : 7,
+                left : 14,
+            },
+        });
+
+        var f1_key = new Vue({
+            el : "#kn_f1key",
+            data : {
+                height : 44,
+                width : 98,
+                color : "#2010FF",
+                text : "F1",
+                fontsize : 32,
+                bottom : 7,
+                left : 132,
+            },
+        });
+
+        var f2_key = new Vue({
+            el : "#kn_f2key",
+            data : {
+                height : 44,
+                width : 98,
+                color : "#10C010",
+                text : "F2",
+                fontsize : 32,
+                bottom : 7,
+                left : 250,
+            },
+        });
+
+        var r_key = new Vue({
+            el : "#kn_rkey",
+            data : {
+                height : 44,
+                width : 98,
+                color : "#FFFF00",
+                text : "R▶",
+                fontsize : 32,
+                bottom : 7,
+                left : 368,
+            },
+        });
+
+        var title = new Vue({
+            el : "#kntitle",
+            data : {
+                height : 54,
+                width : 480,
+                color : "#212121",
+                textcolor : "#EEEEEE",
+                fontsize : 48,
+                top : 0,
+                left : 0,
+                text : "KNTool for Web",
+                align : "center",
+            }
+        });
+
+        var textbox1 = new Vue({
+            el : "#kntextbox1",
+            data : {
+                height : 58,
+                width : 440,
+                color : "#EEEEEE",
+                textcolor : "#212121",
+                fontsize : 50,
+                top : 100,
+                left : 20,
+                labeltext : "商品コード",
+                labelsize : 18,
+                labelheight : 26,
+                value : "",
+            }
+        });
+
+        var textbox2 = new Vue({
+            el : "#kntextbox2",
+            data : {
+                height : 58,
+                width : 220,
+                color : "#EEEEEE",
+                textcolor : "#212121",
+                fontsize : 50,
+                top : 250,
+                left : 20,
+                labeltext : "数量",
+                labelsize : 18,
+                labelheight : 26,
+                value : "",
+                limit : 3,
+            }
+        });
+
+    </script>
+</body>
+</html>
